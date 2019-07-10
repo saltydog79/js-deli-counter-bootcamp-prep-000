@@ -1,15 +1,16 @@
 
 function takeANumber(katzDeliLine, name) {
-  var message = "Welcome, " + name + ". " + "You are number " + (katzDeliLine.length + 1) + " in line.";
-  katzDeliLine.push(name);
+  var message = "Welcome, " + name + ". " + "You are number " + (katzDeliLine.push(name)) + " in line.";
+
 return message
 }
 
-// Another solution to takeANumber:::::::
-// function takeANumber(katzDeliLine, name) {
-//   katzDeliLine.push(`${name}`);
-//   return (`Welcome, ${name}. You are number ${katzDeliLine.length} in line.`)
-// }
+var ticketNumber = 0;
+function takeANumber(katzDeliLine) {
+  katzDeliLine.push(++ticketNumber);
+var message = "Welcome. You have ticket number " + ticketNumber;
+return message
+}
 
 
 function nowServing(katzDeliLine) {
